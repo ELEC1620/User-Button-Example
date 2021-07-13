@@ -23,18 +23,17 @@ int main(){
         //read the status of the button, if true turn LED1 ON
         if(button.read() == true){
             led.write(1);   //turn on led1
+         
         }else{
             led.write(0);   //turn off led1
-        };
-
-
+        }
     }
 }
 
 void init_buttons(){
     button.mode(PullNone);  //turn off internal pull up / pull down resistors
-};
+}
 
 void init_led(){
     led.write(0);   //turn off led1
-};
+}
