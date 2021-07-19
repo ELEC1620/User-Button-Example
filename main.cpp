@@ -1,6 +1,7 @@
 /*  Button Example
 *   Test the Functionality of the on board LED
 *   using the on board user button.
+*   NOTE: Logic is inverted
 *
 *   Board: NUCLEO L476RG
 *   Author: Andrew Knowles 2021
@@ -22,10 +23,10 @@ int main(){
 
         //read the status of the button, if true turn LED1 ON
         if(button.read() == true){
-            led.write(1);   //turn on led1
+            led.write(0);   //turn on led1
          
         }else{
-            led.write(0);   //turn off led1
+            led.write(1);   //turn off led1
         }
     }
 }
@@ -35,5 +36,5 @@ void init_buttons(){
 }
 
 void init_led(){
-    led.write(0);   //turn off led1
+    led.write(1);   //turn off led1
 }
